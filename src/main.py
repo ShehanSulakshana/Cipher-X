@@ -1,4 +1,6 @@
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
+from classical_cipher.caesar_cipher import CaesarCipher
+
 
 class Main :
 
@@ -34,7 +36,9 @@ class Main :
                 input_value = int(input(f"\n{self.tab_space}[?] Choice : "))
 
                 if input_value == 1 :
-                    print("Option 1")       #TODO : Implement option method call
+                    # FIXME : Only a single cipher from planned list is called here , need to show a list here
+                    caesar_cipher = CaesarCipher()
+                    caesar_cipher.get_inputs()
                     correct_input = True
 
                 elif input_value == 2 :
@@ -49,6 +53,7 @@ class Main :
                     print(f"{self.tab_space}{Fore.RED}[!] Invalid input {Style.RESET_ALL}")
             except Exception as e:
                 print(f"{self.tab_space}{Fore.RED}[!] Invalid input {Style.RESET_ALL}")
+                print(e)
 
 
     def run(self):
