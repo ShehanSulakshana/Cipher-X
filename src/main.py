@@ -38,7 +38,8 @@ class Main :
                 if input_value == 1 :
                     # FIXME : Only a single cipher from planned list is called here , need to show a list here
                     caesar_cipher = CaesarCipher()
-                    caesar_cipher.get_inputs()
+                    caesar_cipher.execute()
+
                     correct_input = True
 
                 elif input_value == 2 :

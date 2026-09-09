@@ -5,6 +5,9 @@ class Cipher(ABC):
     def __init__(self):
         pass
 
+    @abstractmethod
+    def execute(self):
+        pass
 
     @abstractmethod
     def get_inputs(self):
@@ -15,6 +18,10 @@ class Cipher(ABC):
     def encrypt(self):
         pass
 
+
+    @abstractmethod
+    def display_encryption(self):
+        pass
 
     @staticmethod
     def validate_input(input_plaintext):
@@ -29,5 +36,3 @@ class Cipher(ABC):
             return list_plaintext
         else :
             return Exception("Input plaintext is too lengthy.")
-
-
