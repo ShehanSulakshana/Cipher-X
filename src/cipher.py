@@ -36,3 +36,17 @@ class Cipher(ABC):
             return list_plaintext
         else :
             return Exception("Input plaintext is too lengthy.")
+
+
+    @staticmethod
+    def validate_key(keyword):
+        # Trim leading and trailing spaces
+        keyword = keyword.strip()
+
+        for char in keyword:
+            if char.isalpha():
+                pass
+            else :
+                raise Exception("Entered key contains non alphabetic characters. [eg:- . , / * #]")
+
+        return True

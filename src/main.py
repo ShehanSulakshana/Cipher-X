@@ -1,6 +1,7 @@
 from colorama import Fore, Style
 from classical_cipher.caesar_cipher import CaesarCipher
 from src.classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
+from src.classical_cipher.vigenere_cipher import VigenereCipher
 
 
 class Main :
@@ -41,8 +42,11 @@ class Main :
                     # caesar_cipher = CaesarCipher()
                     # caesar_cipher.execute()
 
-                    monoalphabetic_cipher = MonoalphabeticCipher()
-                    monoalphabetic_cipher.execute()
+                    # monoalphabetic_cipher = MonoalphabeticCipher()
+                    # monoalphabetic_cipher.execute()
+
+                    vigenere_cipher = VigenereCipher()
+                    vigenere_cipher.execute()
 
 
                     correct_input = True

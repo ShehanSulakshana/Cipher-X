@@ -1,9 +1,11 @@
+from abc import ABC
+
 from typing_extensions import override
 from colorama import Fore, Style ,Back
 from src.cipher import Cipher
 from time import sleep
 
-class CaesarCipher(Cipher):
+class CaesarCipher(Cipher, ABC):
 
     def __init__(self):
         super().__init__()
