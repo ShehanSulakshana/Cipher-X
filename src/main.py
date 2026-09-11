@@ -25,8 +25,14 @@ class Main :
         print(f"\t{Fore.GREEN}{'#' * 75}{Style.RESET_ALL}")
 
     def display_menu(self):
-        print(f"\n{self.tab_space *3}[1]. Classical Ciphers")
-        print(f"{self.tab_space *3}[2]. Advanced Ciphers")
+        print(f"\n{self.tab_space *2}{Fore.BLUE}{Style.BRIGHT}> Classical Ciphers : {Style.RESET_ALL}")
+        print(f"{self.tab_space *3}[1]. Caesar Cipher")
+        print(f"{self.tab_space *3}[2]. Substitution Cipher (Mono-alphabetic)")
+        print(f"{self.tab_space *3}[3]. Vigenere Cipher (Poly-alphabetic)")
+
+        print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Classical Ciphers : {Style.RESET_ALL}")
+        print(f"{self.tab_space * 3}[1]. Caesar Cipher")
+
 
 
     def handle_options(self):
