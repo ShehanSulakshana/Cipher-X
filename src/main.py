@@ -1,5 +1,7 @@
 from colorama import Fore, Style
 from classical_cipher.caesar_cipher import CaesarCipher
+from src.classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
+from src.classical_cipher.vigenere_cipher import VigenereCipher
 
 
 class Main :
@@ -37,8 +39,15 @@ class Main :
 
                 if input_value == 1 :
                     # FIXME : Only a single cipher from planned list is called here , need to show a list here
-                    caesar_cipher = CaesarCipher()
-                    caesar_cipher.execute()
+                    # caesar_cipher = CaesarCipher()
+                    # caesar_cipher.execute()
+
+                    # monoalphabetic_cipher = MonoalphabeticCipher()
+                    # monoalphabetic_cipher.execute()
+
+                    vigenere_cipher = VigenereCipher()
+                    vigenere_cipher.execute()
+
 
                     correct_input = True
 

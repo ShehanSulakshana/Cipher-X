@@ -1,9 +1,11 @@
+from abc import ABC
+
 from typing_extensions import override
 from colorama import Fore, Style ,Back
 from src.cipher import Cipher
 from time import sleep
 
-class CaesarCipher(Cipher):
+class CaesarCipher(Cipher, ABC):
 
     def __init__(self):
         super().__init__()
@@ -28,6 +30,8 @@ class CaesarCipher(Cipher):
         # Plaintext input and validate/process
         self.plaintext_input = str(input(f"\n{self.tab_space}[?] Plaintext : "))
         self.plaintext_list = self.validate_input(self.plaintext_input.upper())
+        self.filter_plaintext()
+
 
         # Shift input and validation
         self.shift_value = int(input(f"\n{self.tab_space}[?] Shift by [1-25; Default 3 ]: "))
@@ -40,18 +44,22 @@ class CaesarCipher(Cipher):
 
     def encrypt(self):
         for char in self.plaintext_list:
-            if char.isalpha():
-                index = self.alphabet.index(char)
-                enc_index = divmod((index + self.shift_value) , 26)[-1]  # implemented -> encipher = plaintext_value + index (mode26)
-                enc_char = self.alphabet[enc_index]
+            index = self.alphabet.index(char)
+            enc_index = divmod((index + self.shift_value) , 26)[-1]  # implemented -> encipher = plaintext_value + index (mode26)
+            enc_char = self.alphabet[enc_index]
 
-                self.ciphertext_list.append(enc_char)
+            self.ciphertext_list.append(enc_char)
 
         self.display_encryption()
 
+    def filter_plaintext(self):
+        filtered_temp = []
+        for char in self.plaintext_list:
+            if char.isalpha():
+                filtered_temp.append(char)
+        self.plaintext_list = filtered_temp  # Filtered input plaintext = only contain letters
 
     def display_encryption(self):
         # Displaying encryption output with formatted plaintext
         print(f"\n\n{self.tab_space}{Back.BLACK} [@] Plain Text  : {Style.RESET_ALL}   {''.join([char for char in self.plaintext_list if char.isalpha()])}")
         print(f"\n{self.tab_space}{Fore.GREEN}{Back.BLACK} [#] Cipher Text : {Style.RESET_ALL}   {"".join(self.ciphertext_list)}")
-
