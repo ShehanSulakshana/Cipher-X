@@ -58,14 +58,12 @@ class VigenereCipher(Cipher, ABC):
                 current = 0         # without wasting an iteration round on else condition , which becomes reason to a key generation inconsistent.
 
 
-
     def filter_plaintext(self):
         filtered_temp = []
         for char in self.plaintext_list:
             if char.isalpha():
                 filtered_temp.append(char)
         self.plaintext_list = filtered_temp # Filtered input plaintext = only contain letters
-
 
 
     def encrypt(self):
@@ -80,9 +78,7 @@ class VigenereCipher(Cipher, ABC):
         self.display_encryption()
 
 
-
     def display_encryption(self):
         # Displaying encryption output with formatted plaintext
         print(f"\n\n{self.tab_space}{Back.BLACK} [@] Plain Text  : {Style.RESET_ALL}   {''.join([char for char in self.plaintext_list if char.isalpha()])}")
         print(f"\n{self.tab_space}{Fore.GREEN}{Back.BLACK} [#] Cipher Text : {Style.RESET_ALL}   {"".join(self.ciphertext_list)}")
-
