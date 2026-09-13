@@ -1,6 +1,7 @@
 from colorama import Fore, Style
 from classical_cipher.caesar_cipher import CaesarCipher
 from src.classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
+from src.classical_cipher.vernam_otp_cipher import VernamCipher
 from src.classical_cipher.vigenere_cipher import VigenereCipher
 
 
@@ -25,8 +26,15 @@ class Main :
         print(f"\t{Fore.GREEN}{'#' * 75}{Style.RESET_ALL}")
 
     def display_menu(self):
-        print(f"\n{self.tab_space *3}[1]. Classical Ciphers")
-        print(f"{self.tab_space *3}[2]. Advanced Ciphers")
+        print(f"\n{self.tab_space *2}{Fore.BLUE}{Style.BRIGHT}> Classical Ciphers  {Style.RESET_ALL}")
+        print(f"{self.tab_space *3}[1]. Caesar Cipher")
+        print(f"{self.tab_space *3}[2]. Substitution Cipher (Mono-alphabetic)")
+        print(f"{self.tab_space *3}[3]. Vigenere Cipher (Poly-alphabetic)")
+        print(f"{self.tab_space *3}[4]. Vernam Cipher / One Time Pad (OTP)")
+
+        print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Symmetric Ciphers {Style.RESET_ALL}")
+
+
 
 
     def handle_options(self):
@@ -38,25 +46,23 @@ class Main :
                 input_value = int(input(f"\n{self.tab_space}[?] Choice : "))
 
                 if input_value == 1 :
-                    # FIXME : Only a single cipher from planned list is called here , need to show a list here
-                    # caesar_cipher = CaesarCipher()
-                    # caesar_cipher.execute()
-
-                    # monoalphabetic_cipher = MonoalphabeticCipher()
-                    # monoalphabetic_cipher.execute()
-
-                    vigenere_cipher = VigenereCipher()
-                    vigenere_cipher.execute()
-
-
+                    caesar_cipher = CaesarCipher()
+                    caesar_cipher.execute()
                     correct_input = True
 
                 elif input_value == 2 :
-                    print("Option 2")       #TODO : Implement option method call
+                    monoalphabetic_cipher = MonoalphabeticCipher()
+                    monoalphabetic_cipher.execute()
                     correct_input = True
 
                 elif input_value ==3 :
-                    print("Option 3")       #TODO : Implement option method call
+                    vigenere_cipher = VigenereCipher()
+                    vigenere_cipher.execute()
+                    correct_input = True
+
+                elif input_value ==4 :
+                    vernam_cipher = VernamCipher()
+                    vernam_cipher.execute()
                     correct_input = True
 
                 else:
