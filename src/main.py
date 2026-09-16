@@ -3,6 +3,7 @@ from classical_cipher.caesar_cipher import CaesarCipher
 from src.classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
 from src.classical_cipher.vernam_otp_cipher import VernamCipher
 from src.classical_cipher.vigenere_cipher import VigenereCipher
+from src.modern_cipher.aes_cipher import AEScipher
 
 
 class Main :
@@ -32,7 +33,14 @@ class Main :
         print(f"{self.tab_space *3}[3]. Vigenere Cipher (Poly-alphabetic)")
         print(f"{self.tab_space *3}[4]. Vernam Cipher / One Time Pad (OTP)")
 
-        print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Symmetric Ciphers {Style.RESET_ALL}")
+        print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Modern Ciphers {Style.RESET_ALL}")
+        print(f"{self.tab_space *3}[5]. AES (Advanced Encryption Standard)")
+        print(f"{self.tab_space *3}[6]. DES (Data Encryption Standard)")
+        print(f"{self.tab_space *3}[7]. Triple DES (3DES)")
+        print(f"{self.tab_space *3}[8]. RSA (Public-Key Cryptography)")
+
+        # print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Steganography {Style.RESET_ALL}")
+        # print(f"{self.tab_space *3}[9]. Image Steganography")
 
 
 
@@ -65,11 +73,15 @@ class Main :
                     vernam_cipher.execute()
                     correct_input = True
 
+                elif input_value ==5 :
+                    aes_cipher = AEScipher()
+                    aes_cipher.execute()
+                    correct_input = True
+
                 else:
                     print(f"{self.tab_space}{Fore.RED}[!] Invalid input {Style.RESET_ALL}")
-            except Exception as e:
+            except ValueError:
                 print(f"{self.tab_space}{Fore.RED}[!] Invalid input {Style.RESET_ALL}")
-                print(e)
 
 
     def run(self):
