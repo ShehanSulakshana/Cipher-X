@@ -19,9 +19,6 @@ class Cipher(ABC):
         pass
 
 
-    @abstractmethod
-    def display_encryption(self):
-        pass
 
     @staticmethod
     def validate_input(input_plaintext):
