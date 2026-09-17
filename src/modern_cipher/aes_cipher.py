@@ -11,6 +11,12 @@ from src.modern_cipher.Modern_BaseCipher import ModernBaseCipher
 
 class AEScipher(ModernBaseCipher, ABC):
 
+    def get_inputs(self):
+        super().get_inputs()
+        if self.mode == 'decrypt':
+            self.nonce_input = str(input(f"{self.tab_space}[?] Nonce : "))
+            self.decrypt()
+
     def encrypt(self):
         try:
             if not hasattr(self, "plaintext_input") or not self.plaintext_input:
