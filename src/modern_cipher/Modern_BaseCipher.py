@@ -51,9 +51,7 @@ class ModernBaseCipher(Cipher, ABC):
             print(f"\n{self.tab_space *2}{Fore.GREEN}>> Decryption{Style.RESET_ALL}")
             self.ciphertext_input = str(input(f"\n{self.tab_space}[?] CipherText : "))
             self.key_input = str(input(f"{self.tab_space}[?] Decrypt Key : "))
-            self.nonce_input = str(input(f"{self.tab_space}[?] Nonce : "))
 
-            self.decrypt()
 
 
     @abstractmethod
