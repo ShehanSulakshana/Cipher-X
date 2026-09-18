@@ -4,6 +4,7 @@ from src.classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
 from src.classical_cipher.vernam_otp_cipher import VernamCipher
 from src.classical_cipher.vigenere_cipher import VigenereCipher
 from src.modern_cipher.aes_cipher import AEScipher
+from src.modern_cipher.rsa_cipher import RSAcipher
 
 
 class Main :
@@ -35,9 +36,7 @@ class Main :
 
         print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Modern Ciphers {Style.RESET_ALL}")
         print(f"{self.tab_space *3}[5]. AES (Advanced Encryption Standard)")
-        print(f"{self.tab_space *3}[6]. DES (Data Encryption Standard)")
-        print(f"{self.tab_space *3}[7]. Triple DES (3DES)")
-        print(f"{self.tab_space *3}[8]. RSA (Public-Key Cryptography)")
+        print(f"{self.tab_space *3}[6]. RSA (Public-Key Cryptography)")
 
         # print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Steganography {Style.RESET_ALL}")
         # print(f"{self.tab_space *3}[9]. Image Steganography")
@@ -76,6 +75,11 @@ class Main :
                 elif input_value ==5 :
                     aes_cipher = AEScipher()
                     aes_cipher.execute()
+                    correct_input = True
+
+                elif input_value ==6 :
+                    rsa_cipher = RSAcipher()
+                    rsa_cipher.execute()
                     correct_input = True
 
                 else:

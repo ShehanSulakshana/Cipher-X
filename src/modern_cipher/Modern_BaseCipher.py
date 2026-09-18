@@ -17,7 +17,7 @@ class ModernBaseCipher(Cipher, ABC):
         self.shift_value = 3
 
     def execute(self):
-        print(f"\n\t{Fore.GREEN}{'*' * 5} [ {self.cipher_name} ] {'*' * 30}{Style.RESET_ALL}")
+        print(f"\n\t{Fore.GREEN}{'*' * 5} [ {self.cipher_name} ] {'*' * (75 - (11 + len(self.cipher_name)))}{Style.RESET_ALL}")
         print(f"\n{self.tab_space * 2}{Fore.GREEN}> Modes :  {Style.RESET_ALL}")
         print(f"{self.tab_space * 3}[1]. Encryption")
         print(f"{self.tab_space * 3}[2]. Decryption")
@@ -49,8 +49,7 @@ class ModernBaseCipher(Cipher, ABC):
             self.encrypt()
         else:
             print(f"\n{self.tab_space *2}{Fore.GREEN}>> Decryption{Style.RESET_ALL}")
-            self.ciphertext_input = str(input(f"\n{self.tab_space}[?] CipherText : "))
-            self.key_input = str(input(f"{self.tab_space}[?] Decrypt Key : "))
+            # Child class implementations
 
 
 

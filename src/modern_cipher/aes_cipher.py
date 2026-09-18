@@ -14,6 +14,8 @@ class AEScipher(ModernBaseCipher, ABC):
     def get_inputs(self):
         super().get_inputs()
         if self.mode == 'decrypt':
+            self.ciphertext_input = str(input(f"\n{self.tab_space}[?] Cipher text : "))
+            self.key_input = str(input(f"{self.tab_space}[?] Key : "))
             self.nonce_input = str(input(f"{self.tab_space}[?] Nonce : "))
             self.decrypt()
 
