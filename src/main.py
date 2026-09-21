@@ -1,6 +1,7 @@
 from time import sleep
 
 from colorama import Fore, Style
+
 from classical_cipher.caesar_cipher import CaesarCipher
 from src.classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
 from src.classical_cipher.vernam_otp_cipher import VernamCipher
@@ -46,6 +47,23 @@ class Main :
         # print(f"{self.tab_space *3}[9]. Image Steganography")
 
 
+    def flow_control(self):
+        sleep(1.5)
+        # correct_input = False
+
+        while True:
+            try :
+                user_choice = int(input(f"\n\n{self.tab_space}[?] Exit(0) / Restart(1) : "))
+                if user_choice == 0:
+                    print(f"\n{self.tab_space}{Fore.RED}[EXIT] {Fore.YELLOW}Thank you for using Cipher-X. Cipher-X out.{Style.RESET_ALL}")
+                    sleep(1.5)
+                    return True
+                elif user_choice == 1 :
+                    return False
+                else:
+                    print(f"{self.tab_space}{Fore.RED}[!] Invalid input {Style.RESET_ALL}")
+            except ValueError:
+                print(f"{self.tab_space}{Fore.RED}[!] Invalid input {Style.RESET_ALL}")
 
 
     def handle_options(self):
@@ -61,34 +79,74 @@ class Main :
                     caesar_cipher.execute()
                     correct_input = True
 
+                    # Flow Controlling
+                    if self.flow_control():
+                        break
+                    else :
+                        self.run()
+
                 elif input_value == 2 :
                     monoalphabetic_cipher = MonoalphabeticCipher()
                     monoalphabetic_cipher.execute()
                     correct_input = True
+
+                    # Flow Controlling
+                    if self.flow_control():
+                        break
+                    else :
+                        self.run()
+
 
                 elif input_value ==3 :
                     vigenere_cipher = VigenereCipher()
                     vigenere_cipher.execute()
                     correct_input = True
 
+                    # Flow Controlling
+                    if self.flow_control():
+                        break
+                    else :
+                        self.run()
+
+
                 elif input_value ==4 :
                     vernam_cipher = VernamCipher()
                     vernam_cipher.execute()
                     correct_input = True
+
+                    # Flow Controlling
+                    if self.flow_control():
+                        break
+                    else :
+                        self.run()
+
 
                 elif input_value ==5 :
                     aes_cipher = AEScipher()
                     aes_cipher.execute()
                     correct_input = True
 
+                    # Flow Controlling
+                    if self.flow_control():
+                        break
+                    else :
+                        self.run()
+
+
                 elif input_value ==6 :
                     rsa_cipher = RSAcipher()
                     rsa_cipher.execute()
                     correct_input = True
 
+                    # Flow Controlling
+                    if self.flow_control():
+                        break
+                    else :
+                        self.run()
+
                 elif input_value ==0:
                     print(f"\n{self.tab_space}{Fore.RED}[EXIT] {Fore.YELLOW}Thank you for using Cipher-X. Cipher-X out.{Style.RESET_ALL}")
-                    sleep(2)
+                    sleep(1.5)
                     break
 
                 else:
