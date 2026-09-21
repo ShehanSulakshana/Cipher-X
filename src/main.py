@@ -1,3 +1,5 @@
+from time import sleep
+
 from colorama import Fore, Style
 from classical_cipher.caesar_cipher import CaesarCipher
 from src.classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
@@ -37,6 +39,8 @@ class Main :
         print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Modern Ciphers {Style.RESET_ALL}")
         print(f"{self.tab_space *3}[5]. AES (Advanced Encryption Standard)")
         print(f"{self.tab_space *3}[6]. RSA (Public-Key Cryptography)")
+
+        print(f"\n{self.tab_space *3}[0]. Exit")
 
         # print(f"\n{self.tab_space * 2}{Fore.BLUE}{Style.BRIGHT}> Steganography {Style.RESET_ALL}")
         # print(f"{self.tab_space *3}[9]. Image Steganography")
@@ -81,6 +85,11 @@ class Main :
                     rsa_cipher = RSAcipher()
                     rsa_cipher.execute()
                     correct_input = True
+
+                elif input_value ==0:
+                    print(f"\n{self.tab_space}{Fore.RED}[EXIT] {Fore.YELLOW}Thank you for using Cipher-X. Cipher-X out.{Style.RESET_ALL}")
+                    sleep(2)
+                    break
 
                 else:
                     print(f"{self.tab_space}{Fore.RED}[!] Invalid input {Style.RESET_ALL}")
