@@ -49,8 +49,6 @@ class Main :
 
     def flow_control(self):
         sleep(1.5)
-        # correct_input = False
-
         while True:
             try :
                 user_choice = int(input(f"\n\n{self.tab_space}[?] Exit(0) / Restart(1) : "))
@@ -59,6 +57,7 @@ class Main :
                     sleep(1.5)
                     return True
                 elif user_choice == 1 :
+                    print(f"\n\n\t{Fore.GREEN}{'#' * 75}{Style.RESET_ALL}")
                     return False
                 else:
                     print(f"{self.tab_space}{Fore.RED}[!] Invalid input {Style.RESET_ALL}")
