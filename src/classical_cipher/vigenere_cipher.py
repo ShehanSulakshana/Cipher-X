@@ -1,8 +1,13 @@
-from abc import ABC
+import sys
+from pathlib import Path
+root_dir = Path(__file__).resolve().parent.parent
+sys.path.append(str(root_dir))
 
+
+from abc import ABC
 from typing_extensions import override
 from colorama import Fore, Style ,Back
-from src.cipher import Cipher
+from cipher import Cipher
 from time import sleep
 
 class VigenereCipher(Cipher, ABC):

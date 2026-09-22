@@ -1,6 +1,12 @@
+import sys
+from pathlib import Path
+root_dir = Path(__file__).resolve().parent.parent
+sys.path.append(str(root_dir))
+
+
 from time import sleep
 from colorama import Fore, Style, Back
-from src.cipher import Cipher
+from cipher import Cipher
 
 
 class MonoalphabeticCipher(Cipher):

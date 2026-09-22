@@ -6,7 +6,7 @@ from colorama import Back, Fore, Style
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.exceptions import InvalidTag
 
-from src.modern_cipher.Modern_BaseCipher import ModernBaseCipher
+from .Modern_BaseCipher import ModernBaseCipher
 
 
 class AEScipher(ModernBaseCipher, ABC):

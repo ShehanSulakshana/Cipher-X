@@ -1,7 +1,7 @@
 import os
 from abc import ABC
 from colorama import Back, Fore, Style
-from src.modern_cipher.Modern_BaseCipher import ModernBaseCipher
+from .Modern_BaseCipher import ModernBaseCipher
 
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding

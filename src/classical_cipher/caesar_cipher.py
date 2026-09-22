@@ -1,8 +1,12 @@
-from abc import ABC
+import sys
+from pathlib import Path
+root_dir = Path(__file__).resolve().parent.parent
+sys.path.append(str(root_dir))
 
+from abc import ABC
 from typing_extensions import override
 from colorama import Fore, Style ,Back
-from src.cipher import Cipher
+from cipher import Cipher
 from time import sleep
 
 class CaesarCipher(Cipher, ABC):
@@ -62,4 +66,4 @@ class CaesarCipher(Cipher, ABC):
     def display_encryption(self):
         # Displaying encryption output with formatted plaintext
         print(f"\n\n{self.tab_space}{Back.BLACK} [@] Plain Text  : {Style.RESET_ALL}   {''.join([char for char in self.plaintext_list if char.isalpha()])}")
-        print(f"\n{self.tab_space}{Fore.GREEN}{Back.BLACK} [#] Cipher Text : {Style.RESET_ALL}   {"".join(self.ciphertext_list)}")
+        print(f"\n{self.tab_space}{Fore.GREEN}{Back.BLACK} [#] Cipher Text : {Style.RESET_ALL}   {''.join(self.ciphertext_list)}")

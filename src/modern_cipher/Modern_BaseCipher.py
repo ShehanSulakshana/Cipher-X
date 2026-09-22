@@ -1,4 +1,10 @@
-from src.cipher import Cipher
+import sys
+from pathlib import Path
+root_dir = Path(__file__).resolve().parent.parent
+sys.path.append(str(root_dir))
+
+
+from cipher import Cipher
 from abc import ABC, abstractmethod
 from colorama import Fore, Style , Back
 

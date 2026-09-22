@@ -3,11 +3,11 @@ from time import sleep
 from colorama import Fore, Style
 
 from classical_cipher.caesar_cipher import CaesarCipher
-from src.classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
-from src.classical_cipher.vernam_otp_cipher import VernamCipher
-from src.classical_cipher.vigenere_cipher import VigenereCipher
-from src.modern_cipher.aes_cipher import AEScipher
-from src.modern_cipher.rsa_cipher import RSAcipher
+from classical_cipher.monoalphabetic_cipher import MonoalphabeticCipher
+from classical_cipher.vernam_otp_cipher import VernamCipher
+from classical_cipher.vigenere_cipher import VigenereCipher
+from modern_cipher.aes_cipher import AEScipher
+from modern_cipher.rsa_cipher import RSAcipher
 
 
 class Main :
