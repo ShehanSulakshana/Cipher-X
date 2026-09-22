@@ -1,7 +1,5 @@
 <div align="center">
 
-  <img src="https://img.shields.io/badge/Cipher--X-Cryptographic_Implementations-000000?style=for-the-badge&logo=1Password&logoColor=white" alt="Cipher-X Header Badge" />
-
   # 🔐 Cipher-X
 
   **A lightweight Python tool built to practice and understand cryptographic implementations.**
@@ -14,8 +12,9 @@
 
   [![GitHub Stars](https://img.shields.io/github/stars/ShehanSulakshana/Cipher-X?style=flat-square&logo=github&color=gold)](https://github.com/ShehanSulakshana/Cipher-X/stargazers)
   [![GitHub Forks](https://img.shields.io/github/forks/ShehanSulakshana/Cipher-X?style=flat-square&logo=github&color=blue)](https://github.com/ShehanSulakshana/Cipher-X/network/members)
-  [![GitHub Issues](https://img.shields.io/github/issues/ShehanSulakshana/Cipher-X?style=flat-square&logo=github&color=orange)](https://github.com/ShehanSulakshana/Cipher-X/issues)
-  [![GitHub PRs](https://img.shields.io/github/issues-pr/ShehanSulakshana/Cipher-X?style=flat-square&logo=github&color=brightgreen)](https://github.com/ShehanSulakshana/Cipher-X/pulls)
+
+[//]: # (  [![GitHub Issues]&#40;https://img.shields.io/github/issues/ShehanSulakshana/Cipher-X?style=flat-square&logo=github&color=orange&#41;]&#40;https://github.com/ShehanSulakshana/Cipher-X/issues&#41;)
+[//]: # (  [![GitHub PRs]&#40;https://img.shields.io/github/issues-pr/ShehanSulakshana/Cipher-X?style=flat-square&logo=github&color=brightgreen&#41;]&#40;https://github.com/ShehanSulakshana/Cipher-X/pulls&#41;)
   [![Last Commit](https://img.shields.io/github/last-commit/ShehanSulakshana/Cipher-X?style=flat-square&logo=git&color=purple)](https://github.com/ShehanSulakshana/Cipher-X/commits/main)
   [![Repo Size](https://img.shields.io/github/repo-size/ShehanSulakshana/Cipher-X?style=flat-square&logo=files&color=informational)](https://github.com/ShehanSulakshana/Cipher-X)
   [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square&logo=git&logoColor=white)](https://github.com/ShehanSulakshana/Cipher-X/pulls)
@@ -23,6 +22,11 @@
 </div>
 
 <br />
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ShehanSulakshana/ShehanSulakshana/refs/heads/main/ProjectAssets/cipher-x.png" alt="Cipher-X Banner" width="100%" />
+  <br /><br />
+  <img src="https://img.shields.io/badge/Cipher--X-Cryptographic_Implementations-000000?style=for-the-badge&logo=1Password&logoColor=white" alt="Cipher-X Header Badge" />
+</div>
 
 ---
 ## 📌 Overview
