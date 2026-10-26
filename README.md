@@ -37,6 +37,13 @@ Instead of relying on high-level abstractions, this tool was built to write, tes
 
 ---
 
+### 🎬 Watch the Demo Video
+> 
+> Check out the full walkthrough and feature demonstration on LinkedIn:  
+> 🔗 **[Watch Demo Video on LinkedIn](https://lnkd.in/p/gZJSZqqp)**
+
+---
+
 ## ⚡ Key Highlights
 
 -  **Symmetric & Asymmetric Encryption Concepts:** Easy-to-follow implementations of core ciphers.
